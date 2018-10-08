@@ -1,0 +1,248 @@
+/* ROOT */
+
+:root {
+    --yellow: #ffc600;
+    --black: rgb(12, 12, 12);
+    --blackish: rgb(12, 12, 12, 0.8);
+    --bg-red: rgb(234, 0, 0, 0.3);
+    --mk-red: rgba(234, 0, 0, 0.5);
+    --fawn: #e59f71;
+    --grey: rgb(182, 198, 224);
+    --darkorangeish: rgb(209, 115, 0, 0, 8);
+    --raisinblack: #3D3D2D;
+    --white: #fafafa;
+    --dirtwhite: rgba(212, 212, 212, 0.8);
+    font-size: 14px;
+    font-family: "Nunito", "FontAwesome", sans-serif;
+}
+
+/* PLACEHOLDER */
+
+::placeholder {
+    font-size: 0.9rem;
+    padding-left: 5px;
+    background: none;
+    color: var(--blackish);
+    opacity: 0.5;
+}
+
+/* SELECTION */
+
+::-moz-selection,
+::selection {
+    background: var(--mk-red);
+}
+
+/* BODY  */
+
+body {
+    background-image: url("https://pic.chinesefontdesign.com/uploads/2017/04/chinesefontdesign.com_2017-04-06_10-03-24.jpg");
+    background-color: lightgrey;
+    overflow: auto;
+    background-size: 100%;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    padding: 0.8em;
+}
+
+/* HEADER */
+
+.header,
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-column-gap: 5vw;
+    justify-content: center;
+}
+
+.active {
+    color: var(--dirtwhite);
+}
+
+header {
+    /* position: sticky; */
+    z-index: 2;
+    top: 0px;
+    height: 20px;
+    background-color: var(--black);
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+}
+
+header nav section,
+footer nav section {
+    padding: 0px 3px;
+}
+
+header nav section a:hover,
+footer nav section a:hover {
+    color: var(--white);
+}
+
+header nav section a,
+footer nav section a,
+header nav section p,
+footer nav section p {
+    text-decoration: none;
+    color: var(--raisinblack);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 2px 5px 2px 6px;
+    margin: 0px;
+}
+
+/* FOOTER */
+
+footer {
+    /* bottom: 0;
+    left: 0; */
+    background-color: var(--black);
+    padding: 10px 0px 10px 0px;
+}
+
+/* CONTENT */
+
+form legend {
+    color: var(--black);
+    /* font-variant: small-caps; */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.video-responsive {
+    overflow: hidden;
+    /* 16:9 */
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container input[type="file"],
+.container input[type="tel"],
+.container input[type="submit"] {
+    width: calc(100% - 40px);
+    border-radius: 5px;
+    padding-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.container div {
+    padding-left: 5%;
+    margin-bottom: 0.3em;
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+p.help::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f129";
+    font-style: normal;
+    padding-right: 5px;
+    padding-left: 2px;
+}
+
+label {
+    /* display: none; */
+    padding-left: .6rem;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+label::after {
+    content: ": ";
+}
+
+/* ASIDE */
+
+aside {
+    padding: 0px 2vw 0px 4vw;
+    top: 50px;
+    z-index: 1;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+ol>li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+
+ol>li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;
+}
+
+li ol>li {
+    margin: 0;
+}
+
+li ol>li:before {
+    content: counters(item, ".") " ";
+}
+
+aside a {
+    text-decoration: none;
+    color: inherit;
+    transition-duration: 50ms;
+}
+
+aside a:hover {
+    color: var(--raisinblack);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+    .content {
+        width: auto;
+        /* padding-left: 32%;
+        position: relative; */
+        margin-bottom: 15px;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .toc {
+        width: auto;
+        position: fixed;
+        padding: 15px 1vw 15px 2vw;
+        z-index: 100;
+    }
+
+    .content {
+        width: auto;
+        padding-left: 32%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    aside {
+        display: block;
+    }
+}
