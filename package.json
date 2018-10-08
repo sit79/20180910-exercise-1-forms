@@ -25,5 +25,6 @@
   "homepage": "https://github.com/sit79/20180910-exercise-forms#readme",
   "dependencies": {
     "gh-pages": "^2.0.1"
-  }
+  },
+  "devDependencies": {}
 }
