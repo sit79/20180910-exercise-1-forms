@@ -1,0 +1,29 @@
+{
+  "name": "20180910-exercise-1-forms",
+  "version": "1.0.0",
+  "description": "exercise form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sit79/20180910-exercise-forms.git"
+  },
+  "keywords": [
+    "form",
+    "exercise",
+    "china",
+    "visa",
+    "application"
+  ],
+  "author": "Stefan Tolksdorf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sit79/20180910-exercise-forms/issues"
+  },
+  "homepage": "https://github.com/sit79/20180910-exercise-forms#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
